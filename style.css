@@ -1,0 +1,114 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: Lato;
+	font-size: 20px;
+}
+header {
+	height: 40vh;
+	width: 100vw;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.897), rgba(59, 57, 57, 0.082)),
+		url('./waterfall.jpg');
+	color: #ccc4c4;
+	font-size: 3rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.yellow{
+	color: yellow;
+}
+
+i{
+	/* color: #ccc4c4; */
+	transform: rotateY(180deg);
+	margin-right: 50px;
+	font-size: 10rem;
+}
+
+.date_time .time {
+	margin: 2.3rem;
+	padding-top: 1.6rem;
+	font-size: 8rem;
+}
+.date_time .date {
+	font-size: 2rem;
+	display: inline;
+	color: #ffffff;
+	opacity: 1;
+}
+
+/* Main Content */
+
+main {
+	letter-spacing: 1.5px;
+	display: grid;
+	height: 60vh;
+	align-items: stretch;
+	grid-template-columns: repeat(12, auto);
+	grid-template-rows: repeat(2, auto);
+	line-height: 3rem;
+	background-color: #beb1b1;
+	align-items: center;
+	justify-content: space-evenly;
+	grid-gap: 30px;
+	grid-template-areas:
+		'city city city city country country country country tmz tmz tmz tmz'
+		'temp temp temp temp wind wind wind wind vis vis vis vis'
+		'sun sun sun sun moon moon moon moon moon_il moon_il moon_il moon_il';
+}
+main div {
+	background-color: #f3f0f0;
+	box-shadow: 3px 3.5px #292828;
+	/* border: 2px solid rgb(126, 122, 122); */
+	border-radius: 15px;
+}
+
+main div p {
+	text-align: center;
+}
+main div h3 {
+	text-align: center;
+}
+
+/* Grid Area thingis  */
+
+/* main div:hover {
+	background-color: rgb(36, 33, 33);
+	color: #e6d9d9;
+	border: 2px solid whitesmoke;
+} */
+
+.city {
+	grid-area: city;
+}
+.country {
+	grid-area: country;
+}
+.tmz {
+	grid-area: tmz;
+}
+.temp {
+	grid-area: temp;
+}
+.vis {
+	text-align: center;
+	align-self: center;
+	grid-area: vis;
+}
+.wind {
+	grid-area: wind;
+}
+.sun {
+	grid-area: sun;
+}
+.moon {
+	grid-area: moon;
+}
+.moon_il {
+	grid-area: moon_il;
+}
